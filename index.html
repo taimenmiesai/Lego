@@ -22,6 +22,7 @@
   --t-technic: #d96a00;
   --t-minecraft: #3f8f2f;
   --t-creator: #c22a5a;
+  --t-friends: #8a3fc2;
   --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -31,7 +32,7 @@
     --bg: #12141a; --surface: #1b1e27; --fg: #eceef3; --muted: #a2a8b8; --line: #2c303c;
     --plate: #e2b400; --plate-stud: #c99f00; --plate-fg: #15171d;
     --accent: #ff6a5c; --link: #7fb0ff; --img-bg: #f4f5f8;
-    --t-city: #5b9cff; --t-starwars: #b7bccb; --t-technic: #ff9a3d; --t-minecraft: #6cc455; --t-creator: #ff6f9c;
+    --t-city: #5b9cff; --t-starwars: #b7bccb; --t-technic: #ff9a3d; --t-minecraft: #6cc455; --t-creator: #ff6f9c; --t-friends: #c48bff;
     color-scheme: dark;
   }
 }
@@ -39,7 +40,7 @@
   --bg: #12141a; --surface: #1b1e27; --fg: #eceef3; --muted: #a2a8b8; --line: #2c303c;
   --plate: #e2b400; --plate-stud: #c99f00; --plate-fg: #15171d;
   --accent: #ff6a5c; --link: #7fb0ff; --img-bg: #f4f5f8;
-  --t-city: #5b9cff; --t-starwars: #b7bccb; --t-technic: #ff9a3d; --t-minecraft: #6cc455; --t-creator: #ff6f9c;
+  --t-city: #5b9cff; --t-starwars: #b7bccb; --t-technic: #ff9a3d; --t-minecraft: #6cc455; --t-creator: #ff6f9c; --t-friends: #c48bff;
   color-scheme: dark;
 }
 
@@ -251,12 +252,12 @@ footer { color: var(--muted); font-size: 13px; padding-block: 0 40px; }
   Tiedot päivittyvät Google Drive -taulukosta <i>Legopaketit</i>.
 </footer>
 
-<script src="paketit.js?v=1a62a68445"></script>
+<script src="paketit.js?v=1339e671a1"></script>
 <script>
 
 const THEME_COLOR = {
   "City": "var(--t-city)", "Star Wars": "var(--t-starwars)", "Technic": "var(--t-technic)",
-  "Minecraft": "var(--t-minecraft)", "Creator 3in1": "var(--t-creator)",
+  "Minecraft": "var(--t-minecraft)", "Creator 3in1": "var(--t-creator)", "Friends": "var(--t-friends)",
 };
 const eur = new Intl.NumberFormat("fi-FI", { style: "currency", currency: "EUR" });
 const kpl = p => p.kpl || 1;
@@ -283,7 +284,7 @@ function renderHeader() {
   document.getElementById("facts").innerHTML =
     `<span><b>${kplYht}</b> pakettia</span>` +
     `<span><b>${new Set(PAKETIT.map(p => p.teema)).size}</b> teemaa</span>` +
-    (puuttuu.length ? `<span>Hinta puuttuu ${puuttuu.length} setiltä (${puuttuu.map(p => p.nro).join(", ")})</span>` : "");
+    (puuttuu.length ? `<span>Hinta puuttuu ${puuttuu.length} setiltä${puuttuu.length <= 5 ? ` (${puuttuu.map(p => p.nro).join(", ")})` : ""}</span>` : "");
 }
 
 function renderChips() {
