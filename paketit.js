@@ -16,16 +16,17 @@ const PAKETIT = [
   {"nro": "60470", "nimi": "Arktisten tutkimusretkeilijöiden pikajuna", "teema": "City", "hinta": 179.9},
   {"nro": "60238", "nimi": "Vaihtoraiteet", "teema": "City", "hinta": 24.95},
   {"nro": "60205", "nimi": "Raiteet", "teema": "City", "hinta": 18.95},
-  {"nro": "21276", "nimi": "Creeper™", "teema": "Minecraft", "hinta": null},
+  {"nro": "21276", "nimi": "Creeper™", "teema": "Minecraft", "hinta": 29.99},
   {"nro": "21268", "nimi": "Porsasvauvan talo", "teema": "Minecraft", "hinta": 19.99},
   {"nro": "21587", "nimi": "Zombiluolasto", "teema": "Minecraft", "hinta": 29.99},
-  {"nro": "60448", "nimi": "Urheiluauto", "teema": "City", "hinta": null},
-  {"nro": "42179", "nimi": "Maapallo ja Kuu kiertoradalla", "teema": "Technic", "hinta": null},
+  {"nro": "60448", "nimi": "Urheiluauto", "teema": "City", "hinta": 12.0},
+  {"nro": "42179", "nimi": "Maapallo ja Kuu kiertoradalla", "teema": "Technic", "hinta": 99.99},
   {"nro": "60503", "nimi": "Rannikkovartioston helikopteri", "teema": "City", "hinta": 55.0},
   {"nro": "60504", "nimi": "Rannikkovartioston pelastusvene ja helikopteri", "teema": "City", "hinta": 120.0},
-  {"nro": "7738", "nimi": "Rannikkovartioston helikopteri ja pelastuslautta", "teema": "City", "hinta": null, "kpl": 2},
+  {"nro": "7738", "nimi": "Rannikkovartioston helikopteri ja pelastuslautta", "teema": "City", "hinta": 30.0, "kpl": 2},
   {"nro": "42105", "nimi": "Katamaraani", "teema": "Technic", "hinta": 25.0},
   {"nro": "42221", "nimi": "NASA Artemis -avaruusraketti", "teema": "Technic", "hinta": 52.99},
   {"nro": "31387", "nimi": "Ikoninen merirosvolaiva", "teema": "Creator 3in1", "hinta": 64.99},
-  {"nro": "60283", "nimi": "Lomamatkailuauto", "teema": "City", "hinta": null}
+  {"nro": "60283", "nimi": "Lomamatkailuauto", "teema": "City", "hinta": 24.0},
+  {"nro": "60304", "nimi": "Tierakennuslevyt", "teema": "City", "hinta": 19.95}
 ];
