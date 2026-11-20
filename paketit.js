@@ -12,7 +12,7 @@ const PAKETIT = [
   {"nro": "75333", "nimi": "Obi-Wan Kenobin Jedi Starfighter™", "teema": "Star Wars", "hinta": 39.95},
   {"nro": "60419", "nimi": "Poliisivoimien Vankisaari", "teema": "City", "hinta": 119.95},
   {"nro": "60316", "nimi": "Poliisiasema", "teema": "City", "hinta": 74.95},
-  {"nro": "60456", "nimi": "Takaa-ajo poliisiveneellä", "teema": "City", "hinta": 25.95},
+  {"nro": "60456", "nimi": "Takaa-ajo poliisiveneellä", "teema": "City", "hinta": 29.0},
   {"nro": "60470", "nimi": "Arktisten tutkimusretkeilijöiden pikajuna", "teema": "City", "hinta": 179.9},
   {"nro": "60238", "nimi": "Vaihtoraiteet", "teema": "City", "hinta": 24.95},
   {"nro": "60205", "nimi": "Raiteet", "teema": "City", "hinta": 18.95},
