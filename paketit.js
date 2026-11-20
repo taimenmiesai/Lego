@@ -26,5 +26,6 @@ const PAKETIT = [
   {"nro": "7738", "nimi": "Rannikkovartioston helikopteri ja pelastuslautta", "teema": "City", "hinta": null, "kpl": 2},
   {"nro": "42105", "nimi": "Katamaraani", "teema": "Technic", "hinta": 25.0},
   {"nro": "42221", "nimi": "NASA Artemis -avaruusraketti", "teema": "Technic", "hinta": 52.99},
-  {"nro": "31387", "nimi": "Ikoninen merirosvolaiva", "teema": "Creator 3in1", "hinta": 64.99}
+  {"nro": "31387", "nimi": "Ikoninen merirosvolaiva", "teema": "Creator 3in1", "hinta": 64.99},
+  {"nro": "60283", "nimi": "Lomamatkailuauto", "teema": "City", "hinta": null}
 ];
