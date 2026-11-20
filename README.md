@@ -2,19 +2,16 @@
 
 Pojan legopaketit yhdellä sivulla (`index.html`). Sivun yläosassa näkyy pakettien yhteishinta.
 
-## Paketin lisääminen
+## Tietojen päivittäminen
 
-Avaa `index.html` ja lisää rivi `PAKETIT`-listaan:
+Pakettien tiedot ovat Google Drive -taulukossa **Legopaketit**
+(https://docs.google.com/spreadsheets/d/1TeuiNlC6BCXnQ6bJzcLlY6HB33mq6ZA07wng4CZpeyA/edit).
 
-```js
-{ nro: "60414", nimi: "Paloasema ja paloauto", teema: "City", hinta: 99.95 },
-```
+Sarakkeet: Settinumero | Nimi | Teema | Ostohinta (€) | Kpl. Jätä hinta tyhjäksi, jos se ei ole tiedossa.
 
-- `hinta: null`, jos hinta ei ole tiedossa
-- `kpl: 2`, jos samaa settiä on useampi
-
-Kuva haetaan ensin kansiosta `kuvat/<nro>.jpg` ja sen jälkeen netistä settinumeron perusteella.
-Rakennusohjeen linkki muodostetaan settinumerosta LEGOn ohjesivulle.
+Ajastettu tehtävä lukee taulukon kerran kuukaudessa (kuun 1. päivä klo 00.00 Suomen aikaa),
+ajaa `python3 paivita.py <taulukko.json>` ja pushaa muutokset. Skripti kirjoittaa `paketit.js`-tiedoston
+ja lataa uusien settien kuvat `kuvat/`-kansioon settinumeron perusteella. `paketit.js`-tiedostoa ei muokata käsin.
 
 ## Julkaisu
 

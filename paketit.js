@@ -1,0 +1,30 @@
+/* Luotu automaattisesti Google Drive -taulukosta "Legopaketit" (paivita.py).
+   Älä muokkaa käsin: muutokset tehdään taulukkoon. */
+const PAKETIT = [
+  {"nro": "60414", "nimi": "Paloasema ja paloauto", "teema": "City", "hinta": 99.95},
+  {"nro": "60413", "nimi": "Palokunnan pelastuslentokone", "teema": "City", "hinta": 72.95},
+  {"nro": "60373", "nimi": "Palokunnan pelastusvene", "teema": "City", "hinta": 24.95},
+  {"nro": "60418", "nimi": "Poliisin rikoslaboratorioauto", "teema": "City", "hinta": 64.95},
+  {"nro": "75345", "nimi": "501. legioonan kloonisoturit -taistelupaketti", "teema": "Star Wars", "hinta": 24.95},
+  {"nro": "75372", "nimi": "Kloonisoturin ja taisteludroidin taistelupakkaus", "teema": "Star Wars", "hinta": 34.95},
+  {"nro": "75337", "nimi": "AT-TE™-talsija", "teema": "Star Wars", "hinta": 179.95},
+  {"nro": "75386", "nimi": "Paz Vizsla™ ja Moff Gideon™ taistelussa", "teema": "Star Wars", "hinta": 49.95},
+  {"nro": "75333", "nimi": "Obi-Wan Kenobin Jedi Starfighter™", "teema": "Star Wars", "hinta": 39.95},
+  {"nro": "60419", "nimi": "Poliisivoimien Vankisaari", "teema": "City", "hinta": 119.95},
+  {"nro": "60316", "nimi": "Poliisiasema", "teema": "City", "hinta": 74.95},
+  {"nro": "60456", "nimi": "Takaa-ajo poliisiveneellä", "teema": "City", "hinta": 25.95},
+  {"nro": "60470", "nimi": "Arktisten tutkimusretkeilijöiden pikajuna", "teema": "City", "hinta": 179.9},
+  {"nro": "60238", "nimi": "Vaihtoraiteet", "teema": "City", "hinta": 24.95},
+  {"nro": "60205", "nimi": "Raiteet", "teema": "City", "hinta": 18.95},
+  {"nro": "21276", "nimi": "Creeper™", "teema": "Minecraft", "hinta": null},
+  {"nro": "21268", "nimi": "Porsasvauvan talo", "teema": "Minecraft", "hinta": 19.99},
+  {"nro": "21587", "nimi": "Zombiluolasto", "teema": "Minecraft", "hinta": 29.99},
+  {"nro": "60448", "nimi": "Urheiluauto", "teema": "City", "hinta": null},
+  {"nro": "42179", "nimi": "Maapallo ja Kuu kiertoradalla", "teema": "Technic", "hinta": null},
+  {"nro": "60503", "nimi": "Rannikkovartioston helikopteri", "teema": "City", "hinta": 55.0},
+  {"nro": "60504", "nimi": "Rannikkovartioston pelastusvene ja helikopteri", "teema": "City", "hinta": 120.0},
+  {"nro": "7738", "nimi": "Rannikkovartioston helikopteri ja pelastuslautta", "teema": "City", "hinta": null, "kpl": 2},
+  {"nro": "42105", "nimi": "Katamaraani", "teema": "Technic", "hinta": 25.0},
+  {"nro": "42221", "nimi": "NASA Artemis -avaruusraketti", "teema": "Technic", "hinta": 52.99},
+  {"nro": "31387", "nimi": "Ikoninen merirosvolaiva", "teema": "Creator 3in1", "hinta": 64.99}
+];

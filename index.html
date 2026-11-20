@@ -219,41 +219,11 @@ footer { color: var(--muted); font-size: 13px; padding-block: 0 40px; }
 
 <footer class="wrap">
   Kuvat: Rebrickable, settinumeron perusteella. Rakennusohjeet avautuvat LEGOn palvelusivulta.
-  Uuden paketin voi lisätä <code>PAKETIT</code>-listaan sivun lähdekoodissa.
+  Tiedot päivittyvät Google Drive -taulukosta <i>Legopaketit</i>.
 </footer>
 
+<script src="paketit.js"></script>
 <script>
-/* ===== Paketit =====
-   Lisää uusi paketti tähän listaan: nro (settinumero), nimi, teema, hinta (euroina, null jos ei tiedossa), kpl.
-   Kuva haetaan kansiosta kuvat/<nro>.jpg ja rakennusohje LEGOn sivulta settinumerolla. */
-const PAKETIT = [
-  { nro: "60414", nimi: "Paloasema ja paloauto", teema: "City", hinta: 99.95 },
-  { nro: "60413", nimi: "Palokunnan pelastuslentokone", teema: "City", hinta: 72.95 },
-  { nro: "60373", nimi: "Palokunnan pelastusvene", teema: "City", hinta: 24.95 },
-  { nro: "60418", nimi: "Poliisin rikoslaboratorioauto", teema: "City", hinta: 64.95 },
-  { nro: "75345", nimi: "501. legioonan kloonisoturit -taistelupaketti", teema: "Star Wars", hinta: 24.95 },
-  { nro: "75372", nimi: "Kloonisoturin ja taisteludroidin taistelupakkaus", teema: "Star Wars", hinta: 34.95 },
-  { nro: "75337", nimi: "AT-TE™-talsija", teema: "Star Wars", hinta: 179.95 },
-  { nro: "75386", nimi: "Paz Vizsla™ ja Moff Gideon™ taistelussa", teema: "Star Wars", hinta: 49.95 },
-  { nro: "75333", nimi: "Obi-Wan Kenobin Jedi Starfighter™", teema: "Star Wars", hinta: 39.95 },
-  { nro: "60419", nimi: "Poliisivoimien Vankisaari", teema: "City", hinta: 119.95 },
-  { nro: "60316", nimi: "Poliisiasema", teema: "City", hinta: 74.95 },
-  { nro: "60456", nimi: "Takaa-ajo poliisiveneellä", teema: "City", hinta: 25.95 },
-  { nro: "60470", nimi: "Arktisten tutkimusretkeilijöiden pikajuna", teema: "City", hinta: 179.90 },
-  { nro: "60238", nimi: "Vaihtoraiteet", teema: "City", hinta: 24.95 },
-  { nro: "60205", nimi: "Raiteet", teema: "City", hinta: 18.95 },
-  { nro: "21276", nimi: "Creeper™", teema: "Minecraft", hinta: null },
-  { nro: "21268", nimi: "Porsasvauvan talo", teema: "Minecraft", hinta: 19.99 },
-  { nro: "21587", nimi: "Zombiluolasto", teema: "Minecraft", hinta: 29.99 },
-  { nro: "60448", nimi: "Urheiluauto", teema: "City", hinta: null },
-  { nro: "42179", nimi: "Maapallo ja Kuu kiertoradalla", teema: "Technic", hinta: null },
-  { nro: "60503", nimi: "Rannikkovartioston helikopteri", teema: "City", hinta: 55.00 },
-  { nro: "60504", nimi: "Rannikkovartioston pelastusvene ja helikopteri", teema: "City", hinta: 120.00 },
-  { nro: "7738",  nimi: "Rannikkovartioston helikopteri ja pelastuslautta", teema: "City", hinta: null, kpl: 2 },
-  { nro: "42105", nimi: "Katamaraani", teema: "Technic", hinta: 25.00 },
-  { nro: "42221", nimi: "NASA Artemis -avaruusraketti", teema: "Technic", hinta: 52.99 },
-  { nro: "31387", nimi: "Ikoninen merirosvolaiva", teema: "Creator 3in1", hinta: 64.99 },
-];
 
 const THEME_COLOR = {
   "City": "var(--t-city)", "Star Wars": "var(--t-starwars)", "Technic": "var(--t-technic)",
