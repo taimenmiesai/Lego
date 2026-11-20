@@ -68,7 +68,21 @@ def kirjoita_js(lista):
     if vanha != sisalto:
         with open(polku, "w", encoding="utf-8") as f:
             f.write(sisalto)
+    paivita_versio(sisalto)
     return vanha != sisalto
+
+
+def paivita_versio(sisalto):
+    """Lisää index.html:n paketit.js-viittaukseen tiedoston tiivisteen, jotta selain ei näytä vanhaa välimuistiversiota."""
+    import hashlib
+    import re
+    versio = hashlib.sha256(sisalto.encode("utf-8")).hexdigest()[:10]
+    polku = os.path.join(JUURI, "index.html")
+    html = open(polku, encoding="utf-8").read()
+    uusi = re.sub(r'src="paketit\.js(\?v=[0-9a-f]*)?"', f'src="paketit.js?v={versio}"', html)
+    if uusi != html:
+        with open(polku, "w", encoding="utf-8") as f:
+            f.write(uusi)
 
 
 def lataa_kuva(nro):
