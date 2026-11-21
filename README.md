@@ -9,8 +9,8 @@ Pakettien tiedot ovat Google Drive -taulukossa **Legopaketit**
 
 Sarakkeet: Settinumero | Nimi | Teema | Ostohinta (€) | Kpl. Jätä hinta tyhjäksi, jos se ei ole tiedossa.
 
-Ajastettu tehtävä lukee taulukon kerran kuukaudessa (kuun 1. päivä klo 00.00 Suomen aikaa),
-ajaa `python3 paivita.py <taulukko.json>` ja pushaa muutokset. Skripti kirjoittaa `paketit.js`-tiedoston
+Ajastettu tehtävä lukee taulukon kerran viikossa (sunnuntaisin klo 19.36 Suomen aikaa),
+täydentää taulukkoon puuttuvat nimet, teemat, hinnat (LEGOn alkuperäinen ovh-hinta euroina) ja kappalemäärät, ajaa `python3 paivita.py <taulukko.json>` ja pushaa muutokset. Skripti kirjoittaa `paketit.js`-tiedoston
 ja lataa uusien settien kuvat `kuvat/`-kansioon settinumeron perusteella. `paketit.js`-tiedostoa ei muokata käsin.
 
 ## Julkaisu

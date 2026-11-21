@@ -226,7 +226,7 @@ footer { color: var(--muted); font-size: 13px; padding-block: 0 40px; }
         <input id="add-nro" name="nro" inputmode="numeric" autocomplete="off" placeholder="Settinumero, esim. 60414" maxlength="7" required>
         <button type="submit" id="add-btn">Lähetä</button>
       </div>
-      <p class="add-msg" id="add-msg" role="status">Numero tallentuu Legopaketit-taulukkoon. Sivulle se tulee seuraavassa kuukausipäivityksessä.</p>
+      <p class="add-msg" id="add-msg" role="status">Numero tallentuu Legopaketit-taulukkoon. Sivulle se tulee seuraavassa viikkopäivityksessä.</p>
     </form>
   </div>
 </header>
@@ -367,7 +367,7 @@ function ilmoita(teksti, tyyppi) {
 }
 function seuraavaPaivitys() {
   const n = new Date();
-  const d = new Date(n.getFullYear(), n.getMonth() + 1, 1);
+  const d = new Date(n.getFullYear(), n.getMonth(), n.getDate() + ((7 - n.getDay()) % 7 || 7)); // seuraava sunnuntai
   return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
 }
 function virheteksti(e) {
