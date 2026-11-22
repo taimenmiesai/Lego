@@ -60,5 +60,6 @@ const PAKETIT = [
   {"nro": "75306", "nimi": "Imperial Probe Droid", "teema": "Star Wars", "hinta": 69.99},
   {"nro": "31025", "nimi": "Mountain Hut", "teema": "Creator 3in1", "hinta": 39.99},
   {"nro": "76286", "nimi": "Guardians of the Galaxy: The Milano", "teema": "Marvel", "hinta": 179.99},
-  {"nro": "60121", "nimi": "Volcano Exploration Truck", "teema": "City", "hinta": 19.99}
+  {"nro": "60121", "nimi": "Volcano Exploration Truck", "teema": "City", "hinta": 19.99},
+  {"nro": "7739", "nimi": "Coast Guard Patrol Boat & Tower", "teema": "City", "hinta": null}
 ];
