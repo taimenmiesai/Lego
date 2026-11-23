@@ -224,6 +224,9 @@ footer { color: var(--muted); font-size: 13px; padding-block: 0 40px; }
       <label for="add-nro">Lisää uusi paketti</label>
       <div class="add-row">
         <input id="add-nro" name="nro" inputmode="numeric" autocomplete="off" placeholder="Settinumero, esim. 60414" maxlength="7" required>
+      </div>
+      <div class="add-row">
+        <input id="add-pw" name="salasana" type="password" autocomplete="current-password" placeholder="Salasana" aria-label="Salasana" required>
         <button type="submit" id="add-btn">Lähetä</button>
       </div>
       <p class="add-msg" id="add-msg" role="status">Numero tallentuu Legopaketit-taulukkoon. Sivulle se tulee seuraavassa viikkopäivityksessä.</p>
@@ -357,6 +360,14 @@ const TAULUKKO_ID = "1TeuiNlC6BCXnQ6bJzcLlY6HB33mq6ZA07wng4CZpeyA";
 const SHEETS = "Google Sheets";
 const lomake = document.getElementById("add-form");
 const kentta = document.getElementById("add-nro");
+const salasanaKentta = document.getElementById("add-pw");
+// Salasanan SHA-256-tiiviste. Itse salasanaa ei ole tallennettu sivulle.
+const SALASANA_TIIVISTE = "216ad8d7d7c0c33e8a39f214c4a30ed51a81a56034ed0624c4f1487087631fdd";
+async function tiiviste(teksti) {
+  const data = new TextEncoder().encode(teksti);
+  const buf = await crypto.subtle.digest("SHA-256", data);
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
 const nappi = document.getElementById("add-btn");
 const viesti = document.getElementById("add-msg");
 let mcpLupaus = null;
@@ -397,6 +408,14 @@ lomake.addEventListener("submit", async e => {
   if (!/^\d{3,7}$/.test(nro)) {
     ilmoita("Kirjoita settinumero numeroina, esim. 60414.", "err");
     kentta.focus();
+    return;
+  }
+  let oikein = false;
+  try { oikein = (await tiiviste(salasanaKentta.value)) === SALASANA_TIIVISTE; } catch (_) {}
+  if (!oikein) {
+    ilmoita("Väärä salasana.", "err");
+    salasanaKentta.value = "";
+    salasanaKentta.focus();
     return;
   }
   const mcp = mcpLupaus ? await mcpLupaus : null;
